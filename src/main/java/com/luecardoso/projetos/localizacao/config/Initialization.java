@@ -23,6 +23,9 @@ public class Initialization implements CommandLineRunner {
 
         cidadeService.salvarCidade(cidade);
         cidadeService.salvarCidade(cidade2);
+        cidadeService.salvarCidade(cidade3);
+        cidadeService.salvarCidade(cidade4);
+
         cidadeService.listarTodasCidades();
         cidadeService.listarCidadePorNome("São Paulo");
         cidadeService.listarCidadePorNomeStartingWith("Rio");
@@ -35,5 +38,9 @@ public class Initialization implements CommandLineRunner {
         cidadeService.listarCidadePorHabitantesGreaterThan(550000L);
         cidadeService.listarCidadePorHabitantesLessThanEqual(10000000L);
         cidadeService.listarCidadePorHabitantesLessThanAndNomeLike(20000000L, "Rio");
+
+        cidadeService.filtroDinamico(cidade3);
+        cidadeService.listarCidadesByNomeSpec(cidade2.getNome(),cidade2.getId());
+        cidadeService.listarCidadesSpecsFiltroDinamico(cidade4);
     }
 }
